@@ -39,7 +39,6 @@ public final class PictureInPictureFragment extends MwFragment implements Pictur
     @Override
     public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        presenter.setView(this);
     }
 
     @Nullable

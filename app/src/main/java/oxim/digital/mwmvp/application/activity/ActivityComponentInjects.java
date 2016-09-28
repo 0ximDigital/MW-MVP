@@ -3,6 +3,7 @@ package oxim.digital.mwmvp.application.activity;
 import oxim.digital.mwmvp.ui.PictureInPicture.PictureInPictureHolderActivity;
 import oxim.digital.mwmvp.ui.fragmented.FragmentHolderActivity;
 import oxim.digital.mwmvp.ui.main.MainActivity;
+import oxim.digital.mwmvp.ui.main.MainPresenter;
 
 public interface ActivityComponentInjects {
 
@@ -11,4 +12,6 @@ public interface ActivityComponentInjects {
     void inject(FragmentHolderActivity fragmentHolderActivity);
 
     void inject(PictureInPictureHolderActivity pictureInPictureHolderActivity);
+
+    void inject(MainPresenter mainPresenter);
 }

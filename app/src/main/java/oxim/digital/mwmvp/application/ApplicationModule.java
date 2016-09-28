@@ -7,6 +7,10 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import oxim.digital.mwmvp.data.LeWildRepositoryImpl;
+import oxim.digital.mwmvp.repository.LeWildRepository;
+import oxim.digital.mwmvp.utils.LeWildUtils;
+import oxim.digital.mwmvp.utils.LeWildUtilsImpl;
 
 @Module
 public final class ApplicationModule {
@@ -36,6 +40,18 @@ public final class ApplicationModule {
         return mwMvpApplication.getResources();
     }
 
+    @Provides
+    @Singleton
+    LeWildUtils provideLeWildUtils() {
+        return new LeWildUtilsImpl();
+    }
+
+    @Provides
+    @Singleton
+    LeWildRepository provideLeWildRepository(final LeWildUtils leWildUtils) {
+        return new LeWildRepositoryImpl(leWildUtils);
+    }
+
     interface Exposes {
 
         MwMvpApplication rosettaApplication();
@@ -44,5 +60,9 @@ public final class ApplicationModule {
         Context context();
 
         Resources resources();
+
+        LeWildUtils leWildUtils();
+
+        LeWildRepository leWildRepository();
     }
 }

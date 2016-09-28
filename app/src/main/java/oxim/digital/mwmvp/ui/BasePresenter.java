@@ -12,13 +12,12 @@ import rx.Subscription;
 import rx.functions.Action1;
 import rx.subscriptions.CompositeSubscription;
 
-public abstract class BasePresenter<T extends BaseView> implements ScopedPresenter<T> {
+public abstract class BasePresenter<T extends BaseView> implements ScopedPresenter {
 
     private CompositeSubscription compositeSubscription;
-    private WeakReference<T> viewWeakReference;
+    private final WeakReference<T> viewWeakReference;
 
-    @Override
-    public void setView(final T view) {
+    public BasePresenter(T view) {
         viewWeakReference = new WeakReference<>(view);
     }
 

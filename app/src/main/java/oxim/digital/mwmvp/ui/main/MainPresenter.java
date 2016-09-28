@@ -4,6 +4,10 @@ import oxim.digital.mwmvp.ui.BasePresenter;
 
 public final class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter {
 
+    public MainPresenter(final MainContract.View view) {
+        super(view);
+    }
+
     @Override
     public void activate() {
         super.activate();

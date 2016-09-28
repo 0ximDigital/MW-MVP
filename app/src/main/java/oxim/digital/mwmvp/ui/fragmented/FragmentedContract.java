@@ -13,7 +13,7 @@ public interface FragmentedContract {
 
     }
 
-    interface Presenter extends ScopedPresenter<View> {
+    interface Presenter extends ScopedPresenter {
 
     }
 }

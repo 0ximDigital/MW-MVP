@@ -1,8 +1,6 @@
 package oxim.digital.mwmvp.ui;
 
-public interface ScopedPresenter<T extends BaseView> {
-
-    void setView(T view);
+public interface ScopedPresenter {
 
     void activate();
 

@@ -19,7 +19,7 @@ public interface ActivityComponent extends ActivityComponentInjects, ActivityCom
             return DaggerActivityComponent.builder()
                                           .applicationComponent(applicationComponent)
                                           .activityModule(new ActivityModule(daggerActivity))
-                                          .activityPresenterModule(new ActivityPresenterModule())
+                                          .activityPresenterModule(new ActivityPresenterModule(daggerActivity))
                                           .build();
         }
 

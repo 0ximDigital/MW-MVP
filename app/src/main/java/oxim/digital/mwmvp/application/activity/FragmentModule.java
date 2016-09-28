@@ -1,16 +1,13 @@
 package oxim.digital.mwmvp.application.activity;
 
-import android.support.v4.app.Fragment;
-
 import dagger.Module;
 
 @Module
 public final class FragmentModule {
 
-    private final Fragment fragment;
+    private final DaggerFragment fragment;
 
-    public FragmentModule(Fragment fragment) {
+    public FragmentModule(DaggerFragment fragment) {
         this.fragment = fragment;
     }
-
 }

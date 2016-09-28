@@ -13,7 +13,7 @@ public interface MainContract {
 
     }
 
-    interface Presenter extends ScopedPresenter<View> {
+    interface Presenter extends ScopedPresenter {
 
     }
 }

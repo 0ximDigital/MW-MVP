@@ -30,7 +30,6 @@ public class MainActivity extends MwActivity implements MainContract.View {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        presenter.setView(this);
 
         rotateAnimation = AnimationUtils.loadAnimation(this, R.anim.rotation);
     }

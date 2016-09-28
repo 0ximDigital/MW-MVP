@@ -11,9 +11,8 @@ public interface PictureInPictureContract {
 
     }
 
-    interface Presenter extends ScopedPresenter<View> {
+    interface Presenter extends ScopedPresenter {
 
         void handleButtonClick();
-
     }
 }

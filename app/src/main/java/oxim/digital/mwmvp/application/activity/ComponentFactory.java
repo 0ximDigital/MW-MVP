@@ -1,7 +1,5 @@
 package oxim.digital.mwmvp.application.activity;
 
-import android.support.v4.app.Fragment;
-
 import oxim.digital.mwmvp.application.ApplicationComponent;
 import oxim.digital.mwmvp.application.MwMvpApplication;
 
@@ -18,7 +16,7 @@ public final class ComponentFactory {
         return ActivityComponent.Initializer.init(daggerActivity, mwMvpApplication.getApplicationComponent());
     }
 
-    public static FragmentComponent createFragmentComponent(Fragment fragment, DaggerActivity daggerActivity) {
+    public static FragmentComponent createFragmentComponent(DaggerFragment fragment, DaggerActivity daggerActivity) {
         return FragmentComponent.Initializer.init(fragment, daggerActivity.getActivityComponent());
     }
 }
