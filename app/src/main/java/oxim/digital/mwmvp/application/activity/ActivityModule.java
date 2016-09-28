@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 
 import dagger.Module;
 import dagger.Provides;
@@ -48,7 +49,6 @@ public final class ActivityModule {
     }
 
     @Provides
-    @ActivityScope
     PresenterRelay providePresenterRelay() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             return new MultiWindowPresenterRelay(daggerActivity.isInMultiWindowMode());
@@ -62,5 +62,7 @@ public final class ActivityModule {
         Router router();
 
         FragmentManager fragmentManager();
+
+        PresenterRelay presenterRelay();
     }
 }

@@ -25,6 +25,12 @@ public final class MainFragment extends MwFragment implements FragmentedContract
         return fragment;
     }
 
+    @Override
+    public void onCreate(final Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        presenter.setView(this);
+    }
+
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {

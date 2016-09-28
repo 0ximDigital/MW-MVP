@@ -3,6 +3,7 @@ package oxim.digital.mwmvp.application.activity;
 import android.support.v4.app.Fragment;
 
 import dagger.Component;
+import oxim.digital.mwmvp.ui.PictureInPicture.PictureInPictureFragment;
 
 @FragmentScope
 @Component(
