@@ -1,9 +1,9 @@
-package oxim.digital.mwmvp.ui.main;
+package oxim.digital.mwmvp.ui.single;
 
 import oxim.digital.mwmvp.ui.BaseView;
 import oxim.digital.mwmvp.ui.ScopedPresenter;
 
-public interface MainContract {
+public interface SingleContract {
 
     interface View extends BaseView {
 

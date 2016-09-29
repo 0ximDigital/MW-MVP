@@ -1,5 +1,7 @@
-package oxim.digital.mwmvp.ui.main;
+package oxim.digital.mwmvp.ui.single;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -15,15 +17,20 @@ import oxim.digital.mwmvp.application.activity.ActivityComponent;
 import oxim.digital.mwmvp.application.activity.MwActivity;
 import oxim.digital.mwmvp.ui.ScopedPresenter;
 
-public class MainActivity extends MwActivity implements MainContract.View {
+public class SingleActivity extends MwActivity implements SingleContract.View {
 
     @Inject
-    MainContract.Presenter presenter;
+    SingleContract.Presenter presenter;
 
     @Bind(R.id.spinny_thingy)
     View spinnyView;
 
     private Animation rotateAnimation;
+
+    public static Intent createIntent(final Context context) {
+        final Intent intent = new Intent(context, SingleActivity.class);
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

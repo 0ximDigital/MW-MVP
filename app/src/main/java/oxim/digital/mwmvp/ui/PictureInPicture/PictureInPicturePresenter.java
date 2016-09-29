@@ -1,15 +1,18 @@
 package oxim.digital.mwmvp.ui.PictureInPicture;
 
 import oxim.digital.mwmvp.ui.BasePresenter;
+import oxim.digital.mwmvp.ui.router.Router;
 
 public final class PictureInPicturePresenter extends BasePresenter<PictureInPictureContract.View> implements PictureInPictureContract.Presenter {
 
-    public PictureInPicturePresenter() {
+    private final Router router;
 
+    public PictureInPicturePresenter(final Router router) {
+        this.router = router;
     }
 
     @Override
-    public void handleButtonClick() {
-        doIfViewNotNull(PictureInPictureContract.View::changeBackgroundColor);
+    public void handlePictureInPictureButtonClick() {
+        router.enterPictureInPicture();
     }
 }

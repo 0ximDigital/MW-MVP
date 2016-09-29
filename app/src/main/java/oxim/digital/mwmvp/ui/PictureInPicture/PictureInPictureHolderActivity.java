@@ -1,5 +1,7 @@
 package oxim.digital.mwmvp.ui.PictureInPicture;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,18 +18,21 @@ public final class PictureInPictureHolderActivity extends DaggerActivity {
     @Inject
     FragmentManager fragmentManager;
 
+    public static Intent createIntent(final Context context) {
+        final Intent intent = new Intent(context, PictureInPictureHolderActivity.class);
+        return intent;
+    }
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two_fragments_holder);
+        setContentView(R.layout.activity_fragment_holder);
         ButterKnife.bind(this);
 
         if (savedInstanceState == null) {
-            final Fragment topFragment = PictureInPictureFragment.newInstance();
-            final Fragment bottomFragment = PictureInPictureFragment.newInstance();
+            final Fragment pipFragment = PictureInPictureFragment.newInstance();
             fragmentManager.beginTransaction()
-                           .add(R.id.top_container, topFragment)
-                           .add(R.id.bottom_container, bottomFragment)
+                           .add(R.id.fragment_container, pipFragment)
                            .commit();
         }
     }

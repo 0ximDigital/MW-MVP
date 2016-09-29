@@ -10,19 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.main.MainActivity">
-        </activity>
-
-        <activity android:name=".ui.fragmented.FragmentHolderActivity">
-        </activity>
-
-        <activity android:name=".ui.PictureInPicture.PictureInPictureHolderActivity">
+        <activity android:name=".ui.welcome.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".ui.single.SingleActivity"/>
+
+        <activity android:name=".ui.fragmented.FragmentHolderActivity"/>
+
+        <activity android:name=".ui.PictureInPicture.PictureInPictureHolderActivity"
+                  android:launchMode="singleTask"
+                  android:supportsPictureInPicture="true"/>
 
     </application>
 </manifest>

@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MW-MVP</string>
+    <!--<string name="app_name">MW-MVP</string>-->
+    <string name="app_name">Your Awesome App</string>
 </resources>

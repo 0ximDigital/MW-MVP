@@ -8,6 +8,7 @@ import oxim.digital.mwmvp.ui.PictureInPicture.PictureInPictureContract;
 import oxim.digital.mwmvp.ui.PictureInPicture.PictureInPicturePresenter;
 import oxim.digital.mwmvp.ui.fragmented.FragmentedContract;
 import oxim.digital.mwmvp.ui.fragmented.MainFragmentPresenter;
+import oxim.digital.mwmvp.ui.router.Router;
 
 @Module
 public final class FragmentPresenterModule {
@@ -26,7 +27,7 @@ public final class FragmentPresenterModule {
 
     @Provides
     @FragmentScope
-    public PictureInPictureContract.Presenter providePictureInPicturePresenter() {
-        return new PictureInPicturePresenter();
+    public PictureInPictureContract.Presenter providePictureInPicturePresenter(final Router router) {
+        return new PictureInPicturePresenter(router);
     }
 }

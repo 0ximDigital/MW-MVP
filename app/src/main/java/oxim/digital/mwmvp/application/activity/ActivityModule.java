@@ -45,7 +45,7 @@ public final class ActivityModule {
     @Provides
     @ActivityScope
     Router provideRouter() {
-        return new RouterImpl();
+        return new RouterImpl(daggerActivity);
     }
 
     @Provides

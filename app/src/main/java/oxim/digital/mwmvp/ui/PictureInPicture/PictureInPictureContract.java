@@ -7,13 +7,11 @@ public interface PictureInPictureContract {
 
     interface View extends BaseView {
 
-        void changeBackgroundColor();
-
     }
 
     interface Presenter extends ScopedPresenter<View> {
 
-        void handleButtonClick();
+        void handlePictureInPictureButtonClick();
 
     }
 }

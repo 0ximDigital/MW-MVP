@@ -1,18 +1,14 @@
 package oxim.digital.mwmvp.ui.PictureInPicture;
 
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.Random;
-
 import javax.inject.Inject;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import oxim.digital.mwmvp.R;
@@ -24,12 +20,6 @@ public final class PictureInPictureFragment extends MwFragment implements Pictur
 
     @Inject
     PictureInPictureContract.Presenter presenter;
-
-    @Bind(R.id.content_root)
-    View view;
-
-    @ColorRes
-    private final int[] colors = {R.color.colorAccent, R.color.colorPrimary, R.color.colorPrimaryDark};
 
     public static PictureInPictureFragment newInstance() {
         PictureInPictureFragment fragment = new PictureInPictureFragment();
@@ -51,12 +41,6 @@ public final class PictureInPictureFragment extends MwFragment implements Pictur
     }
 
     @Override
-    public void changeBackgroundColor() {
-        final Random random = new Random();
-        view.setBackgroundResource(colors[random.nextInt(colors.length)]);
-    }
-
-    @Override
     public void showMessage(final String message) {
         // No-op
     }
@@ -66,9 +50,9 @@ public final class PictureInPictureFragment extends MwFragment implements Pictur
         fragmentComponent.inject(this);
     }
 
-    @OnClick(R.id.click_me_button)
-    public void onClickMeButtonClick() {
-        presenter.handleButtonClick();
+    @OnClick(R.id.card_picture_in_picture)
+    public void onPictureInPictureButtonClick() {
+        presenter.handlePictureInPictureButtonClick();
     }
 
     @NonNull
