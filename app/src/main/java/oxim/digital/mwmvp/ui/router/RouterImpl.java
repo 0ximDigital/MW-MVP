@@ -5,6 +5,7 @@ import android.os.Build;
 
 import oxim.digital.mwmvp.application.activity.DaggerActivity;
 import oxim.digital.mwmvp.ui.PictureInPicture.PictureInPictureHolderActivity;
+import oxim.digital.mwmvp.ui.drag.DragAndDropHolderActivity;
 import oxim.digital.mwmvp.ui.single.SingleActivity;
 import oxim.digital.mwmvp.ui.welcome.WelcomeActivity;
 
@@ -39,7 +40,8 @@ public final class RouterImpl implements Router {
 
     @Override
     public void showDragAndDrop() {
-        // TODO
+        final Intent intent = DragAndDropHolderActivity.createIntent(daggerActivity);
+        daggerActivity.startActivity(intent);
     }
 
     @Override

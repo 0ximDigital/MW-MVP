@@ -6,6 +6,8 @@ import dagger.Module;
 import dagger.Provides;
 import oxim.digital.mwmvp.ui.PictureInPicture.PictureInPictureContract;
 import oxim.digital.mwmvp.ui.PictureInPicture.PictureInPicturePresenter;
+import oxim.digital.mwmvp.ui.drag.DragAndDropContract;
+import oxim.digital.mwmvp.ui.drag.DragAndDropPresenter;
 import oxim.digital.mwmvp.ui.fragmented.FragmentedContract;
 import oxim.digital.mwmvp.ui.fragmented.MainFragmentPresenter;
 import oxim.digital.mwmvp.ui.router.Router;
@@ -29,5 +31,11 @@ public final class FragmentPresenterModule {
     @FragmentScope
     public PictureInPictureContract.Presenter providePictureInPicturePresenter(final Router router) {
         return new PictureInPicturePresenter(router);
+    }
+
+    @Provides
+    @FragmentScope
+    public DragAndDropContract.Presenter provideDragAndDropPresenter() {
+        return new DragAndDropPresenter();
     }
 }

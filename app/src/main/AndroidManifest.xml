@@ -22,6 +22,8 @@
 
         <activity android:name=".ui.fragmented.FragmentHolderActivity"/>
 
+        <activity android:name=".ui.drag.DragAndDropHolderActivity"/>
+
         <activity android:name=".ui.PictureInPicture.PictureInPictureHolderActivity"
                   android:launchMode="singleTask"
                   android:supportsPictureInPicture="true"/>
