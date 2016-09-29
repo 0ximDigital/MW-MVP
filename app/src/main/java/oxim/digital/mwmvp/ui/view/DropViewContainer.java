@@ -40,8 +40,8 @@ public final class DropViewContainer extends LinearLayout {
 
         @Override
         public boolean onDrag(final View view, final DragEvent event) {
-            int action = event.getAction();
-            switch (event.getAction()) {
+            final int action = event.getAction();
+            switch (action) {
                 case DragEvent.ACTION_DRAG_STARTED:
                     break;
                 case DragEvent.ACTION_DRAG_ENTERED:

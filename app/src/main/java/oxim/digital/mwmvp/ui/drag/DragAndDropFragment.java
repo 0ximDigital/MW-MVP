@@ -51,7 +51,7 @@ public final class DragAndDropFragment extends MwFragment implements DragAndDrop
         Stream.rangeClosed(1, 3)
               .map(value -> {
                   final DraggableView draggableView = new DraggableView(getContext());
-                  draggableView.setText(String.valueOf("Draggable view " + value));
+                  draggableView.setText(String.valueOf("DnD view " + value));
                   return draggableView;
               })
               .forEach(dropViewConatiner::addView);
